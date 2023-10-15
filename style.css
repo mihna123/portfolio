@@ -1,0 +1,12 @@
+body {
+    text-align: center;
+    color: white;
+    background-image: url('static/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 200%;
+}
+
+h1, h3 {
+    text-shadow: 2px 2px 4px #000000;    
+}
+
