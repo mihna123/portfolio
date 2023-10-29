@@ -1,14 +1,21 @@
 body {
     text-align: center;
     color: white;
+    background: rgb(100, 149, 237);
 }
 
 h1 {
+    margin-top: 0;
     text-shadow: 2px 2px 4px #000000;    
-    font-size: 200px;
+    font-size: 80px;
 }
 
 h3 {
     text-shadow: 2px 2px 4px #000000;    
 }
 
+#big-profile-img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
