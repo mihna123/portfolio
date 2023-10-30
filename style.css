@@ -52,14 +52,17 @@ h3 {
     z-index: 999;
 }
 
-#big-profile-img {
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
+#profile-div {
     position: relative;
     animation-name: float;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
+}
+
+#big-profile-img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
 }
