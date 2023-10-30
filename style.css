@@ -31,11 +31,24 @@ h3 {
 
 #pause-menu {
     background: rgb(69, 25, 82);
-    position: fixed;
+    padding: 15px 0px;
+    position: relative;
+    top: 15%;
     left: 5%;
     width: 90%;
     height: 70%;
     z-index: 9999;
+    border-radius: 8px;
+}
+
+#pause-backdrop {
+    background-color: rgba(255,255,255,0.4);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 998;
     display: none;
 }
 
