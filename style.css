@@ -30,9 +30,9 @@ h3 {
 }
 
 #pause-menu {
+    background: rgb(69, 25, 82);
     position: fixed;
     left: 5%;
-    background: black;
     width: 90%;
     height: 70%;
     z-index: 9999;
