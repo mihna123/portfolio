@@ -7,6 +7,7 @@
 }
 
 body {
+    margin: 0;
     text-align: center;
     color: white;
     background: rgb(69, 25, 82);
@@ -26,6 +27,16 @@ h2 {
     
 h3 {
     font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#pause-menu {
+    position: fixed;
+    left: 5%;
+    background: black;
+    width: 90%;
+    height: 70%;
+    z-index: 9999;
+    display: none;
 }
 
 #big-circle {
