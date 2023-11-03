@@ -55,11 +55,11 @@ h3 {
 
 #big-circle-up {
     background: rgb(90, 25, 100);
-    width: 100%;
+    width: 150%;
     height: 40%;
     border-radius: 50%;
     position: absolute;
-    left: 0;
+    left: -25%;
     top: -20%;
     z-index: -999;
 }
