@@ -5,9 +5,12 @@
     50% { top: 10px; }
     100% { top: 0; }
 }
+
+
 html {
     overflow-x: hidden;
-    background-image: linear-gradient(rgb(69, 25, 82),rgb(69, 25, 60));
+    background-image: linear-gradient(rgb(69, 25, 82),rgb(69, 25, 60),rgb(69, 25, 82));
+
 }
 
 body {
@@ -63,7 +66,7 @@ h3 {
 }
 
 #big-circle-up {
-    background: rgb(90, 25, 100);
+    background-image: linear-gradient(rgb(90, 25, 100),rgb(90, 25, 90));
     width: 150%;
     height: 300px;
     border-radius: 50%;
@@ -151,4 +154,16 @@ h3 {
     font-family: 'Montserrat Alternates', sans-serif;
     margin: 10px;
     font-size: 1.2rem;
+}
+
+@media (min-width: 500px){
+    #big-profile-img {
+        width: 500px;
+        height: 500px;
+    }
+
+    #about-text {
+        padding: 20px 20%;
+    }
+
 }
