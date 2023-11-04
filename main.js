@@ -17,7 +17,7 @@ function spawn_star_at(x, y) {
     circle_node.style["height"] = size + "px";
     circle_node.style["background"] = "black";
     circle_node.style["border-radius"] = "50%";
-    circle_node.style["position"] = "fixed";
+    circle_node.style["position"] = "absolute";
     circle_node.style["top"] = (y - size/2)+"px";
     circle_node.style["left"] = (x - size/2)+"px";
     circle_node.style["z-index"] = "-10000";
@@ -31,7 +31,7 @@ function spawn_line_at(x1, y1, x2, y2) {
     const top = (y1+y2)/2 - length/2;
 
     const line_node = document.createElement("div");
-    line_node.style["position"] = "fixed";
+    line_node.style["position"] = "absolute";
     line_node.style["width"] = "5px";
     line_node.style["height"] = length + "px";
     line_node.style["top"] = top + "px";
