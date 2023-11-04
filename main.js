@@ -1,26 +1,54 @@
+const width = window.screen.width;
+const height = window.screen.height;
+
 window.onload = function() {
-    document.body.style["width"] = window.screen.width;
+    document.body.style["width"] = width + "px";
     setup_pause_button();
-    spawn_rand_star_group(0, window.screen.width/3);
-    spawn_rand_star_group(window.screen.width/3, window.screen.width*2/3);
-    spawn_rand_star_group(window.screen.width*2/3, window.screen.width);
-    for(let i = 0; i < Math.floor(Math.random()*20); i ++){
-        spawn_star_at(Math.random()*window.screen.width, Math.random()*window.screen.height);
+    spawn_rand_star_group(0, width/3);
+    spawn_rand_star_group(width/3, width*2/3);
+    spawn_rand_star_group(width*2/3, width);
+    for(let i = 0; i < Math.floor(width/40); i ++){
+        spawn_star_at(Math.random()*width, Math.random()*height);
     }
+    window.requestAnimationFrame(anim);
+    setInterval(function() {
+        spawn_star_at(Math.random()*width + width, Math.random()*height);
+    }, 5000);
+    setInterval(function(){
+        spawn_rand_star_group(width, Math.floor(width*4/3));
+    }, 15000);
 }
 
+function anim(){
+    const stars = document.getElementsByClassName("stars");
+    console.log("Num of stars: " + stars.length);
+    for(let el of stars){
+        let cur_pos = get_px_val(el.style["left"]);
+        if(cur_pos < -150){
+            el.remove();
+        }
+        el.style["left"] = (cur_pos-0.3) + "px";
+    }
+    window.requestAnimationFrame(anim);
+}
+
+function get_px_val(input) {
+    const num = input.slice(0,input.length-2);
+    return Number(num);
+}
 
 function spawn_star_at(x, y) {
     const circle_node = document.createElement("div");
     const size = Math.floor(Math.random()*10 + 10)
+    circle_node.className = "stars";
     circle_node.style["width"] = size + "px";
     circle_node.style["height"] = size + "px";
-    circle_node.style["background"] = "black";
+    circle_node.style["background"] = "rgb(102, 37, 73)";
     circle_node.style["border-radius"] = "50%";
     circle_node.style["position"] = "absolute";
     circle_node.style["top"] = (y - size/2)+"px";
     circle_node.style["left"] = (x - size/2)+"px";
-    circle_node.style["z-index"] = "-10000";
+    circle_node.style["z-index"] = "-9999";
     document.body.appendChild(circle_node);
 }
 
@@ -31,12 +59,13 @@ function spawn_line_at(x1, y1, x2, y2) {
     const top = (y1+y2)/2 - length/2;
 
     const line_node = document.createElement("div");
+    line_node.className = "stars";
     line_node.style["position"] = "absolute";
     line_node.style["width"] = "5px";
     line_node.style["height"] = length + "px";
     line_node.style["top"] = top + "px";
     line_node.style["left"] = real_x + "px";
-    line_node.style["background"] = "black";
+    line_node.style["background"] = "rgba(102, 37, 73, 0.6)";
     line_node.style["z-index"] = "-10000";
     line_node.style["transform"] = "rotate(" + -angle + "rad)";
     document.body.appendChild(line_node);

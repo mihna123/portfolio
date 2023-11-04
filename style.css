@@ -12,6 +12,7 @@ body {
     text-align: center;
     color: white;
     background: rgb(69, 25, 82);
+    overflow-x: hidden;
 }
 
 h1 {
