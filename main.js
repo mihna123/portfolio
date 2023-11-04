@@ -76,7 +76,7 @@ function spawn_line_at(x1, y1, x2, y2) {
 
 function spawn_rand_star_group(x1, x2){
     const width = Math.abs(x1-x2);
-    const y2 = Math.floor(Math.random() * window.screen.height * 2/3) + window.screen.height/3;
+    const y2 = Math.floor(Math.random() * window.screen.height / 3) + window.screen.height/3;
     const y1 = y2 - window.screen.height/3;
     const star_count = Math.floor(Math.random() * 3) + 3;
     const star_pos = [];
