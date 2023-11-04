@@ -5,6 +5,9 @@
     50% { top: 10px; }
     100% { top: 0; }
 }
+html {
+    overflow-x: hidden;
+}
 
 body {
     margin: 0;
@@ -29,6 +32,11 @@ h2 {
     
 h3 {
     font-family: 'Montserrat Alternates', sans-serif;
+}
+
+#wraper {
+    position: relative;
+    overflow-x: hidden;
 }
 
 #pause-menu {
@@ -73,7 +81,6 @@ h3 {
     height: 60px;
     margin: 12px;
     position: fixed;
-    right: 12px;
     top: 12px;
     z-index: 999;
 }

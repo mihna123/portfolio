@@ -99,6 +99,7 @@ function spawn_rand_star_group(x1, x2){
 
 function setup_pause_button() {
     const pause_button = document.getElementById("pause-btn");
+    pause_button.style["left"] = (width - 100) + "px";
     const pause_backdrop = document.getElementById("pause-backdrop");
     const pause_icon = pause_button.innerHTML;
     const play_icon = "<i class=\"fa-solid fa-play\" style=\"color: #ffffff;\"></i>";
