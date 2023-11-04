@@ -3,7 +3,6 @@ const height = window.screen.height;
 
 window.onload = function() {
     document.body.style["width"] = width + "px";
-    document.body.style["height"] = height + "px";
     setup_pause_button();
     spawn_rand_star_group(0, width/3);
     spawn_rand_star_group(width/3, width*2/3);
@@ -13,10 +12,12 @@ window.onload = function() {
     }
     window.requestAnimationFrame(anim);
     setInterval(function() {
-        spawn_star_at(Math.random()*width + width, Math.random()*height);
+        if(document.hasFocus())
+            spawn_star_at(Math.random()*width + width, Math.random()*height);
     }, 5000);
     setInterval(function(){
-        spawn_rand_star_group(width, Math.floor(width*4/3));
+        if(document.hasFocus())
+            spawn_rand_star_group(width, Math.floor(width*4/3));
     }, 15000);
 }
 
@@ -37,6 +38,7 @@ function get_px_val(input) {
     const num = input.slice(0,input.length-2);
     return Number(num);
 }
+
 
 function spawn_star_at(x, y) {
     const circle_node = document.createElement("div");
