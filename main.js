@@ -1,7 +1,12 @@
 window.onload = function() {
     document.body.style["width"] = window.screen.width;
     setup_pause_button();
-    spawn_rand_star_group();
+    spawn_rand_star_group(0, window.screen.width/3);
+    spawn_rand_star_group(window.screen.width/3, window.screen.width*2/3);
+    spawn_rand_star_group(window.screen.width*2/3, window.screen.width);
+    for(let i = 0; i < Math.floor(Math.random()*20); i ++){
+        spawn_star_at(Math.random()*window.screen.width, Math.random()*window.screen.height);
+    }
 }
 
 
@@ -37,27 +42,30 @@ function spawn_line_at(x1, y1, x2, y2) {
     document.body.appendChild(line_node);
 }
 
-function spawn_rand_star_group(){
-    const width = window.screen.width;
-    const height = window.screen.height;
+function spawn_rand_star_group(x1, x2){
+    const width = Math.abs(x1-x2);
+    const y2 = Math.floor(Math.random() * window.screen.height * 2/3) + window.screen.height/3;
+    const y1 = y2 - window.screen.height/3;
     const star_count = Math.floor(Math.random() * 3) + 3;
-    console.log("star_count " + star_count);
     const star_pos = [];
+    const cluster = [];
     for(let i = 0; i < star_count; i++){
-        const x_pos = Math.floor(Math.random() * width);
-        const y_pos = Math.floor(Math.random() * height);
+        const x_pos = Math.floor(Math.random() * width) + Math.min(x1,x2);
+        const y_pos = Math.floor(Math.random() * y2) + y1;
         star_pos.push({x: x_pos, y :y_pos});
     } 
-    let temp_pos = undefined;
     for(let i of star_pos){
         spawn_star_at(i.x, i.y);
-        if(temp_pos != undefined && Math.random() > 0.1) {
-            spawn_line_at(i.x, i.y, temp_pos.x, temp_pos.y);
+        if(Math.random() > 0.35){
+            cluster.push(i);
         }
-        temp_pos = i;
     }
-
-    
+    for(let i = 0; i < cluster.length-1; i++){
+        if(i === 0){
+            spawn_line_at(cluster[i].x, cluster[i].y, cluster[cluster.length-1].x,cluster[cluster.length-1].y);
+        }
+        spawn_line_at(cluster[i].x, cluster[i].y, cluster[i+1].x, cluster[i+1].y);
+    }
 }
 
 function setup_pause_button() {
