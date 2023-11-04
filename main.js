@@ -3,6 +3,7 @@ const height = window.screen.height;
 
 window.onload = function() {
     document.body.style["width"] = width + "px";
+    document.body.style["height"] = height + "px";
     setup_pause_button();
     spawn_rand_star_group(0, width/3);
     spawn_rand_star_group(width/3, width*2/3);
