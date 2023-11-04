@@ -12,10 +12,12 @@ window.onload = function() {
     }
     window.requestAnimationFrame(anim);
     setInterval(function() {
-        spawn_star_at(Math.random()*width + width, Math.random()*height);
+        if(document.hasFocus())
+            spawn_star_at(Math.random()*width + width, Math.random()*height);
     }, 5000);
     setInterval(function(){
-        spawn_rand_star_group(width, Math.floor(width*4/3));
+        if(document.hasFocus())
+            spawn_rand_star_group(width, Math.floor(width*4/3));
     }, 15000);
 }
 
@@ -36,6 +38,7 @@ function get_px_val(input) {
     const num = input.slice(0,input.length-2);
     return Number(num);
 }
+
 
 function spawn_star_at(x, y) {
     const circle_node = document.createElement("div");
@@ -73,7 +76,7 @@ function spawn_line_at(x1, y1, x2, y2) {
 
 function spawn_rand_star_group(x1, x2){
     const width = Math.abs(x1-x2);
-    const y2 = Math.floor(Math.random() * window.screen.height * 2/3) + window.screen.height/3;
+    const y2 = Math.floor(Math.random() * window.screen.height / 3) + window.screen.height/3;
     const y1 = y2 - window.screen.height/3;
     const star_count = Math.floor(Math.random() * 3) + 3;
     const star_pos = [];
