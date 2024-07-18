@@ -1,0 +1,620 @@
+@keyframes slidein {
+    from {
+        translate: 0 -300px;
+    }
+
+    to {
+        translate: 0 0;
+    }
+}
+
+@keyframes slideout {
+    from {
+        translate: 0 0;
+    }
+
+    to {
+        translate: 0 -300px;
+    }
+}
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 0.9rem;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+.video-header {
+    font-size: 4rem;
+    position: relative;
+    z-index: -1;
+    font-weight: bold;
+    top: 150px;
+    mix-blend-mode: difference;
+}
+
+#black-woman-video {
+    margin-top: -174px;
+    position: relative;
+    z-index: -2;
+}
+
+section.mock-info {
+    color: black;
+}
+
+section.ctas {
+    color: black;
+}
+
+section.ctas ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+section.ctas li {
+    list-style: none;
+    margin: 10px;
+}
+
+section.ctas img {
+    object-fit: cover;
+}
+
+section.ctas section.header {
+    margin-top: 10px;
+    display: block;
+    background-color: transparent;
+    font-weight: 900;
+    font-size: 0.97rem;
+}
+
+section.ctas section.sub-header {
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+section.as-seen-on-social {
+    color: black;
+    margin-top: 100px;
+}
+
+section.as-seen-on-social h2 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+section.as-seen-on-social ul {
+    display: flex;
+    overflow-x: scroll;
+    margin: 0 100px;
+    padding: 0;
+}
+
+
+section.as-seen-on-social li {
+    text-align: left;
+    list-style: none;
+    margin: 10px;
+    cursor: grab;
+}
+
+section.as-seen-on-social img {
+    object-fit: cover;
+}
+
+section.as-seen-on-social section.header {
+    color: black;
+    background-color: transparent;
+    font-weight: normal;
+}
+
+section.as-seen-on-social section.price {
+    margin-top: 10px;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    color: gray;
+}
+
+section.as-seen-on-social button {
+    border-style: none;
+    padding: 7px 40px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: grab;
+}
+
+section.european-brands-we-love {
+    color: black;
+    margin-top: 100px;
+}
+
+section.european-brands-we-love h2 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+section.european-brands-we-love ul {
+    display: flex;
+    overflow-x: scroll;
+    margin: 30px 100px;
+    padding: 0;
+}
+
+section.european-brands-we-love li {
+    list-style: none;
+    margin: 10px;
+    cursor: grab;
+}
+
+section.european-brands-we-love img {
+    object-fit: cover;
+}
+
+section.european-brands-we-love section.header {
+    display: block;
+    background-color: transparent;
+    margin-top: 20px;
+}
+
+section.european-brands-we-love ul.shops {
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+section.european-brands-we-love ul.shops section.header {
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+section.style-feed {
+    background-color: paleturquoise;
+    color: rgba(0, 0, 0, 0.8);
+    margin-top: 35px;
+    padding: 20px;
+}
+
+section.style-feed h2 {
+    font-size: 1.1rem;
+    font-weight: bolder;
+    margin: 0;
+}
+
+section.style-feed p {
+    font-weight: normal;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+section.style-feed ul {
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+    margin: 0 100px;
+}
+
+section.style-feed li {
+    list-style: none;
+    width: 270px;
+    background-color: white;
+    margin: 10px;
+    text-align: left;
+    cursor: grab;
+}
+
+section.style-feed img {
+    object-fit: cover;
+}
+
+
+section.style-feed section.header {
+    background-color: transparent;
+    font-weight: bolder;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.8);
+    padding: 0 8px;
+}
+
+section.style-feed section.sub-header {
+    font-weight: normal;
+    font-size: 1rem;
+    padding: 2px 8px;
+}
+
+section.style-feed section.date {
+    text-align: right;
+    padding: 8px;
+}
+
+section.style-feed button {
+    border-style: none;
+    background-color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 8px 45px;
+    cursor: grab;
+    margin-top: 30px;
+}
+
+section.style-feed button:hover {
+    background-color: black;
+    color: white;
+    transition-property: background-color;
+    transition-duration: 500ms;
+}
+
+section.shop-app {
+    background: linear-gradient(90deg, red, lightpink);
+}
+
+section.shop-app ul {
+    padding: 0;
+}
+
+section.shop-app li {
+    list-style: none;
+}
+
+section.shop-app button.primary {
+    border: 2px solid black;
+    border-radius: 50px;
+    background-color: transparent;
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding: 4px 40px;
+    margin-top: 30px;
+    cursor: grab;
+}
+
+section.shop-app button.secondary {
+    border-style: none;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    font-size: 1.4rem;
+    padding: 3px 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    cursor: grab;
+}
+
+/*HEADER AREA*/
+.header {
+    display: flex;
+    position: relative;
+    z-index: 500;
+    align-items: center;
+    background-color: rgb(58, 58, 58);
+}
+
+.menu-items {
+    display: flex;
+    margin: 0;
+    padding-left: 18px;
+}
+
+.menu-items li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-items li {
+    list-style: none;
+    text-align: center;
+    border-right: 0.5px solid rgba(255, 255, 255, 0.2);
+    width: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: grab;
+}
+
+
+.search-form {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+}
+
+.sliding-menu {
+    position: absolute;
+    z-index: 3;
+    padding: 0;
+    background-color: white;
+    right: 20px;
+    top: 60px;
+    width: 300px;
+    height: 300px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 200ms linear;
+    color: black;
+}
+
+.menu-header ul {
+    display: flex;
+    margin: 0;
+    padding: 5px;
+}
+
+.menu-header li {
+    list-style: none;
+    margin: 5px;
+}
+
+.menu-header {
+    display: flex;
+    background-color: rgb(245, 245, 245);
+    justify-content: space-between;
+    font-weight: normal;
+    color: gray;
+}
+
+.menu-header a {
+    color: gray;
+}
+
+.menu-header a:visited {
+    color: gray;
+}
+
+.menu-header button {
+    background-color: transparent;
+    border-style: none;
+    cursor: grab;
+}
+
+.menu-header button:hover {
+    color: dodgerblue;
+}
+
+.menu-content ul {
+    padding: 0 10px;
+}
+
+.menu-content li {
+    list-style: none;
+}
+
+.menu-content a {
+    color: gray;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.menu-content a:visited {
+    color: gray;
+}
+
+.menu-content a:hover {
+    color: dodgerblue;
+}
+
+.menu-content span {
+    margin: 12px 5px;
+}
+
+
+.menu-arrow {
+    position: absolute;
+    background-color: rgb(245, 245, 245);
+    top: 48px;
+    right: 101px;
+    width: 50px;
+    height: 20px;
+    clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+
+.slide-in {
+    animation-name: slidein;
+    animation-duration: 1s;
+}
+
+.slide-out {
+    animation-name: slideout;
+    animation-duration: 1s;
+}
+
+.sub-categories {
+    background-color: rgb(90, 90, 90);
+}
+
+.sub-categories ul.main {
+    display: flex;
+    margin: 0;
+}
+
+
+.sub-categories li {
+    list-style: none;
+}
+
+.sub-categories button {
+    font-family: "Nunito Sans", sans-serif;
+    border-style: none;
+    color: white;
+    background-color: transparent;
+    padding: 15px 10px;
+}
+
+.sub-categories button:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.sub-categories menu {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: whitesmoke;
+    color: gray;
+    position: absolute;
+    top: 128px;
+    left: 3%;
+    width: 90%;
+    padding: 25px 10px;
+}
+
+.sub-categories menu li {
+    width: 100%;
+    margin-left: 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sub-categories section.sub-items li {
+    margin: 10px;
+}
+
+.sub-categories section.sub-items ul {
+    padding: 0;
+    /*
+     * TODO: figure out the wrapping stuff
+     *
+     *
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 600px;
+    */
+}
+
+.sub-categories li.img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.sub-categories li.img section.sub-header {
+    text-align: center;
+    position: relative;
+    font-weight: 900;
+    top: 200px;
+    color: white;
+    width: 150px;
+    height: 20px;
+}
+
+
+.sub-categories li.img section.sub-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-categories li.img img:hover {
+    border-color: dodgerblue;
+}
+
+.sub-categories li.img img {
+    object-fit: cover;
+    margin-top: -40px;
+    padding: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sub-categories section.sub-header {
+    color: rgb(90, 90, 90);
+    margin-bottom: 20px;
+}
+
+.sub-categories section.sub-items li {
+    border-style: none;
+}
+
+.sub-categories section.sub-items a {
+    color: rgb(90, 90, 90);
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.sub-categories section.sub-items a:visited {
+    color: rgb(90, 90, 90);
+}
+
+.sub-categories section.sub-items a:hover {
+    color: dodgerblue;
+}
+
+#search-bar {
+    padding: 9px 16px;
+    margin-left: 30px;
+    margin-right: 0;
+    border-radius: 30px;
+    border-style: none;
+    width: 400px;
+}
+
+#search-btn {
+    background-color: white;
+    border-style: none;
+    border-radius: 30px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    transition-property: background-color;
+    transition-duration: 0.4s;
+}
+
+#search-cancel {
+    margin-left: -68px;
+    background-color: white;
+    color: black;
+    border-style: none;
+    visibility: hidden;
+}
+
+#profile-btn {
+    background-color: transparent;
+    color: white;
+    border-style: none;
+    margin-left: 20px;
+    margin-right: 10px;
+    cursor: grab;
+}
+
+#shopping-bag-btn {
+    background-color: transparent;
+    color: white;
+    border-style: none;
+    margin-left: 10px;
+    cursor: grab;
+}
+
+#backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s linear;
+    transition: opacity 1s linear;
+}
+
+/*HEADER AREA ENDS HERE*/
